@@ -1,5 +1,6 @@
 import React from 'react'
 import Mostacho from '../mostacho.jpg'
+import CardWidget from './CardWidget'
 
 const NavBar = () => {
   return (
@@ -7,7 +8,7 @@ const NavBar = () => {
     <div className="container">
         <div className="collapse navbar-collapse order-3" id="navbarCollapse">
             <a href="/#" class="navbar-brand">
-                <img src={Mostacho} className="brand-image img-circle elevation-2"/>
+                <img src={Mostacho} className="brand-image img-circle elevation-2" alt="mostacho barber shopp"/>
                 <span class="brand-text font-weight-light">Mostacho</span>
             </a>
             <ul className="navbar-nav">
@@ -37,12 +38,7 @@ const NavBar = () => {
             </ul>
         </div>
         <ul className="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-            <li className="nav-item dropdown">
-                <a className="nav-link" href="/#">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span className="badge badge-warning navbar-badge">4</span>
-                </a>
-            </li>
+            <CardWidget></CardWidget>
         </ul>
     </div>
   </nav>
