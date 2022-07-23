@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     < NavBar/>
-    < ContentWrapper/>
+    < ContentWrapper/>{/* este contiene dentro el itemListConteiner */}
     </>
   );
 }
