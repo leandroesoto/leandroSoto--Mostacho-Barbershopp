@@ -5,6 +5,7 @@ import Header from './Header'
 
 const ItemListContainer = ({greeting}) => {
 
+
   return (
     <>
     <Header titulo={greeting}/>
@@ -12,9 +13,7 @@ const ItemListContainer = ({greeting}) => {
       <div className="container">
         <div className="row d-flex justify-content-between">
           <div className="col-lg-6">
-            <div className="card">
-              <Item/>
-            </div>
+            <Item/>
           </div>
         </div>
       </div>
