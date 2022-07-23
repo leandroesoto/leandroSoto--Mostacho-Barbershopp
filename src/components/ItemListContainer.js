@@ -1,25 +1,23 @@
 import React from 'react'
+import Item from './Item'
 
-const ItemListContainer = () => {
+
+const ItemListContainer = ({greeting}) => {
+
   return (
     <div className="content">
       <div className="container">
-        <div className="row">
+        <h5>{greeting}</h5>
+        <div className="row d-flex justify-content-between">
           <div className="col-lg-6">
             <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Item 1</h5>
-                <p className="card-text">
-                  Descripción.
-                </p>
-              </div>
+              <Item/>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
+    
   )
-}
-
+} 
 export default ItemListContainer

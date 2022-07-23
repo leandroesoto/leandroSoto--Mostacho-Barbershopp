@@ -6,7 +6,9 @@ const ContentWrapper = () => {
   return (
     <div className="content-wrapper">
         <Header/>
-        <ItemListContainer/>
+        <ItemListContainer
+        greeting='contenedor de productos'
+        />
     </div>
   )
 }

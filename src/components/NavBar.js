@@ -38,7 +38,7 @@ const NavBar = () => {
             </ul>
         </div>
         <ul className="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-            <CardWidget></CardWidget>
+            <CardWidget/>
         </ul>
     </div>
   </nav>
