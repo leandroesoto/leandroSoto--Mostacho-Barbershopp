@@ -19,10 +19,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     return (
         <>
-        <div class="btn-group">
-            <button type="button" onClick={subtract} class="btn btn-default btn-sm"><i class="fas fa-minus"></i></button>
-            <button type="button" class="btn btn-default btn-sm">{contador}</button>
-            <button type="button" onClick={add} class="btn btn-default btn-sm"><i class="fas fa-plus"></i></button>
+        <div className="btn-group">
+            <button type="button" onClick={subtract} className="btn btn-default btn-sm"><i className="fas fa-minus"></i></button>
+            <button type="button" className="btn btn-default btn-sm">{contador}</button>
+            <button type="button" onClick={add} className="btn btn-default btn-sm"><i className="fas fa-plus"></i></button>
         </div>
         <button onClick={()=>onAdd(contador)} className="btn btn-outline-success btn-sm ml-2">
           Comprar

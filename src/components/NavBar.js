@@ -7,9 +7,9 @@ const NavBar = () => {
   <nav className="main-header navbar navbar-expand-md navbar-light navbar-olive">
     <div className="container">
         <div className="collapse navbar-collapse order-3" id="navbarCollapse">
-            <a href="/#" class="navbar-brand">
+            <a href="/#" className="navbar-brand">
                 <img src={Mostacho} className="brand-image img-circle elevation-2" alt="mostacho barber shopp"/>
-                <span class="brand-text font-weight-light">Mostacho</span>
+                <span className="brand-text font-weight-light">Mostacho</span>
             </a>
             <ul className="navbar-nav">
                 <li className="nav-item">
@@ -28,7 +28,7 @@ const NavBar = () => {
                     <a id="dropdownSubMenu2" href="/#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="dropdown-item dropdown-toggle">Categoria 3</a>
                     <ul aria-labelledby="dropdownSubMenu2" className="dropdown-menu border-0 shadow">
                         <li>
-                        <a tabindex="-1" href="/#" className="dropdown-item">Subcategoria 1</a>
+                        <a  href="/#" className="dropdown-item">Subcategoria 1</a>
                         </li>
                         <li><a href="/#" className="dropdown-item">Subcategoria 2</a></li>
                     </ul>

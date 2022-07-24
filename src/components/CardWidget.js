@@ -18,7 +18,7 @@ const CardWidget  = () => {
 
     <li className="nav-item">
         <a className="nav-link" href="/#" onClick={()=>cartAlert()}>
-            <i class="fas fa-shopping-cart"></i>
+            <i className="fas fa-shopping-cart"></i>
             <span className="badge badge-warning navbar-badge">5</span>
         </a>
     </li>

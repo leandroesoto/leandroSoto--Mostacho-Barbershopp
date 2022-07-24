@@ -1,9 +1,23 @@
 import React from 'react'
-import Item from './Item'
 import Header from './Header'
-
+import {productos_data} from '../moks/data-api'
+import ItemList from './ItemList'
+import { useEffect, useState } from "react"
 
 const ItemListContainer = ({greeting}) => {
+  const [listaProductos, setListaProductos]= useState([])
+  const[alerta, setAlerta] = useState(false)
+  const [cargando, setCargando] = useState(true)
+
+  useEffect(()=>{
+    console.log('soy el useEffect')
+    productos_data
+    .then((res)=> setListaProductos(res))
+    .catch(()=> setAlerta('hubo un error, intente mas tarde'))
+    .finally(()=> setCargando(false))
+  }, [])
+
+
 
 
   return (
@@ -11,11 +25,8 @@ const ItemListContainer = ({greeting}) => {
     <Header titulo={greeting}/>
     <div className="content">
       <div className="container">
-        <div className="row d-flex justify-content-between">
-          <div className="col-lg-6">
-            <Item/>
-          </div>
-        </div>
+        {alerta && <p>{alerta}</p>}
+        { cargando ? <p>Cargando...</p> : <ItemList items={listaProductos}/>}
       </div>
     </div>
     </>
