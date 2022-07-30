@@ -86,3 +86,11 @@ export const productos_data = new Promise((resolve, reject) => {
     },2000)
 
   })
+
+
+export const getItem = (productoId) => {
+    const task = new Promise((resolve) => {
+      setTimeout(() => resolve(productos.filter((producto) => producto.id === Number(productoId),)[0] || {}), 2000);
+    });
+    return task;
+  };

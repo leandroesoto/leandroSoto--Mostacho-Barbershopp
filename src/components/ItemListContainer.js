@@ -10,7 +10,6 @@ const ItemListContainer = ({greeting}) => {
   const [cargando, setCargando] = useState(true)
 
   useEffect(()=>{
-    console.log('soy el useEffect')
     productos_data
     .then((res)=> setListaProductos(res))
     .catch(()=> setAlerta('hubo un error, intente mas tarde'))
@@ -25,8 +24,10 @@ const ItemListContainer = ({greeting}) => {
     <Header titulo={greeting}/>
     <div className="content">
       <div className="container">
-        {alerta && <p>{alerta}</p>}
-        { cargando ? <p>Cargando...</p> : <ItemList items={listaProductos}/>}
+        <div className='overlay-wrapper'>
+            { cargando ? <div class="overlay"><i class="fas fa-3x fa-sync-alt fa-spin"></i><spam className="text-muted ml-2"> Cargando...</spam></div> : <ItemList items={listaProductos}/>}
+            {alerta && <p>{alerta}</p>}
+        </div>
       </div>
     </div>
     </>

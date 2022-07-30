@@ -2,6 +2,7 @@ import React from 'react'
 import ItemCount  from './ItemCount'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { Link } from "react-router-dom";
 
 
 const Item = ({item}) => {
@@ -34,7 +35,8 @@ const Item = ({item}) => {
             <p className="card-text mt-2" style={{height: 150, overflowY: 'auto',}} >
               {item.description}
             </p>
-            <button className='btn btn-info btn-sm flo'>Ver Detalle del Producto</button>
+            {/* <button className='btn btn-info btn-sm flo'>Ver Detalle del Producto</button> */}
+            <Link to={`/item/${item.id}`} className='btn btn-info btn-sm flo'>Ver Detalle del Producto</Link>
           </div>
           <div className='mt-3'>
             <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>

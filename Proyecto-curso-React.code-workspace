@@ -1,0 +1,36 @@
+{
+	"folders": [
+		{
+			"path": "D:\\cursoReact\\shopp-leandroSoto"
+		}
+	],
+	"settings": {
+		"restoreTerminals.terminals": [
+			{
+				"splitTerminals": [
+					{
+						"name": "node",
+						"commands": [
+							"yarn start"
+						],
+						"shouldRunCommands": true,
+					},
+				]
+			},
+
+			{
+				"splitTerminals": [
+					{
+						"name": "git",
+						"commands": [
+							"git remote -v update",
+							"git status -uno"
+							],
+						"shouldRunCommands": true,
+					},
+				]
+			},
+		]
+
+	}
+}
