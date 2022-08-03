@@ -5,7 +5,8 @@ Mostacho BarberShopp es una app creada con React.js para el proyecto final del c
 ## Gif modelo
 - link de navegación
 
-![](https://i.postimg.cc/7Z8gm27X/gif-mostacho-Barber-Shopp.gif)
+
+<a href='https://postimg.cc/KRfkY40g' target='_blank'><img src='https://i.postimg.cc/KRfkY40g/gif-mostacho-Barber-Shopp.gif' border='0' alt='gif-mostacho-Barber-Shopp'/>gif</a>
 
 ## Como instalar?
 link para crear app-->[Create React App](https://github.com/facebook/create-react-app).
