@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 const Item = ({item}) => {
 
     const MySwal = withReactContent(Swal)
-    console.log(item)
 
     const onAdd = (cantidad) => {
         MySwal.fire({
@@ -26,7 +25,8 @@ const Item = ({item}) => {
     <div className="col-lg-3 col-6">
       <div className="card">
         <div className="card-header">
-          <h5 className="card-title">{item.title}</h5>
+          <h5 className="card-title">{item.category}</h5>
+          <h5 className="card-title"> {item.title}</h5>
           <span className="text-muted float-right">{}</span>
         </div>
         <div className="card-body">

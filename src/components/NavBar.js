@@ -1,38 +1,32 @@
 import React from 'react'
 import Mostacho from '../mostacho.jpg'
 import CardWidget from './CardWidget'
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
+
   return (
   <nav className="main-header navbar navbar-expand-md navbar-light navbar-olive">
     <div className="container">
         <div className="collapse navbar-collapse order-3" id="navbarCollapse">
-            <a href="/#" className="navbar-brand">
+            <Link to={`/`} className="navbar-brand">
                 <img src={Mostacho} className="brand-image img-circle elevation-2" alt="mostacho barber shopp"/>
                 <span className="brand-text font-weight-light">Mostacho</span>
-            </a>
+            </Link>
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <a href="index.html" className="nav-link">Inicio</a>
+                <Link to={`/`} className="nav-link">Inicio</Link>
                 </li>
                 <li className="nav-item">
-                <a href="/#" className="nav-link">Contacto</a>
+                <Link to={`/Contacto`} className="nav-link">Contacto</Link>
+                
                 </li>
                 <li className="nav-item dropdown">
                 <a id="dropdownSubMenu1" href="/#" data-toggle="dropdown" aria-expanded="false" className="nav-link dropdown-toggle">Categorias</a>
                 <ul aria-labelledby="dropdownSubMenu1" className="dropdown-menu border-0 shadow">
-                    <li><a href="/#" className="dropdown-item">Categoria 1 </a></li>
-                    <li><a href="/#" className="dropdown-item">Categoria 2</a></li>
-                    <li className="dropdown-divider"></li>
-                    <li className="dropdown-submenu dropdown-hover">
-                    <a id="dropdownSubMenu2" href="/#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" className="dropdown-item dropdown-toggle">Categoria 3</a>
-                    <ul aria-labelledby="dropdownSubMenu2" className="dropdown-menu border-0 shadow">
-                        <li>
-                        <a  href="/#" className="dropdown-item">Subcategoria 1</a>
-                        </li>
-                        <li><a href="/#" className="dropdown-item">Subcategoria 2</a></li>
-                    </ul>
-                    </li>
+                    <li><Link to={`/category/1`}className="dropdown-item">Categoria 1</Link></li>
+                    <li><Link to={`/category/2`} className="dropdown-item">Categoria 2</Link></li>
+                    <li><Link to={`/`} className="dropdown-item">Todo</Link></li>
                 </ul>
                 </li>
             </ul>
