@@ -24,10 +24,14 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <button type="button" className="btn btn-default btn-sm">{contador}</button>
             <button type="button" onClick={add} className="btn btn-default btn-sm"><i className="fas fa-plus"></i></button>
         </div>
-        <button onClick={()=>onAdd(contador)} className="btn btn-outline-success btn-sm ml-2">
+        <br/>
+        <div onClick={()=>onAdd(contador)} className="btn btn-primary mt-2">
+            <i className="fas fa-cart-plus fa-lg mr-2"></i>
+            Agregar al carrito
+        </div>
+        {/* <button onClick={()=>onAdd(contador)} className="btn btn-outline-success btn-sm ml-2">
           Comprar
-        </button>
-
+        </button> */}
         </>
     )
 }

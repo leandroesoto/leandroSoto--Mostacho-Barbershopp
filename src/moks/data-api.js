@@ -2,84 +2,84 @@
 const productos =[
   {
     "id": 0,
-    "title": "PYRAMIS",
-    "description": "Ipsum veniam nisi nostrud consequat non exercitation sint magna. Id adipisicing excepteur aliqua anim qui pariatur magna labore dolor exercitation irure culpa reprehenderit. Laboris dolor ipsum quis ex ipsum aliquip proident nulla qui aute sit pariatur nulla. Do reprehenderit in eu veniam duis anim esse sit veniam occaecat in.\r\n",
-    "price": "$1,996.82",
-    "pictureURL": "https://source.unsplash.com/random/800x800/?img=1",
+    "title": "Cera Barbería",
+    "description": "Aporta manejabilidad e incrementa resistencia a agresiones externas,aumenta brillo natural del cabello.Con steres de origen 100 % vegetal.Se puede aplicar tanto en cabellos secos como húmedos.",
+    "price": "$1,390.00",
+    "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_2X_998855-MLA31023241653_062019-F.webp",
     "stock": 3,
-    "category": "1"
+    "category": "Productos"
   },
   {
     "id": 1,
-    "title": "EYEWAX",
-    "description": "Consectetur Lorem laboris voluptate proident ipsum enim et. Nulla proident sit minim aliquip ex fugiat do. Aliquip do sint cillum eiusmod aliquip reprehenderit est ex minim officia dolore.\r\n",
+    "title": "Kit Barbería",
+    "description": "Producto para peinar, con efecto mate. Aporta acondicionamiento y restauración gracias a los activos naturales bio lipid complex, hidrolizado de quinoa, aceite de soja y aceite de abyssinian. Rico en vitaminas A, B, C, E y F. Logrando un cabello fuerte y sano. .",
     "price": "$3,903.78",
-    "pictureURL": "https://source.unsplash.com/random/800x800/?img=1",
+    "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_877592-MLA40198844828_122019-O.webp",
     "stock": 5,
-    "category": "1"
+    "category": "kits"
   },
   {
     "id": 2,
-    "title": "BLANET",
-    "description": "Occaecat id aliquip nisi occaecat pariatur cupidatat labore eiusmod et occaecat minim exercitation nostrud sint. Ex esse qui eu excepteur cupidatat ut. Ullamco veniam dolor esse commodo. In enim enim labore sint fugiat laboris non tempor tempor mollit culpa ad velit occaecat. Ad eu dolore sunt pariatur ipsum fugiat ipsum adipisicing consectetur ad ullamco eiusmod.\r\n",
-    "price": "$1,855.52",
-    "pictureURL": "https://source.unsplash.com/random/800x800/?img=1",
+    "title": "Pomada Para Cabello",
+    "description": "Pomada soluble para el cabello de uso únicamente profesional en barberías.",
+    "price": "$2,450.00",
+    "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_857022-MLA50937461984_072022-O.webp",
     "stock": 6,
-    "category": "2"
+    "category": "Productos"
   },
   {
     "id": 3,
-    "title": "BIOSPAN",
-    "description": "In qui deserunt adipisicing non et deserunt incididunt elit aute eu sint mollit cillum. Et consequat nulla id aliqua irure voluptate ipsum ullamco aliqua. Enim duis pariatur consequat officia ullamco nostrud in eu irure irure. Magna id pariatur amet quis fugiat consectetur. Officia id mollit dolor et eiusmod non cupidatat dolore.\r\n",
-    "price": "$2,844.40",
-    "pictureURL": "https://source.unsplash.com/random/800x800/?img=1",
+    "title": "Pomada Cabello Oleo Barberia",
+    "description": "Pomada al agua ultra mate de larga duracion y fijación media.",
+    "price": "$750.00",
+    "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_865417-MLA45214022636_032021-O.webp",
     "stock": 3,
-    "category": "3"
+    "category": "Productos"
   },
   {
     "id": 4,
-    "title": "EXOSIS",
-    "description": "Dolor consectetur veniam nulla nulla qui duis. Labore consectetur sint proident ipsum anim non. Eu sit incididunt pariatur reprehenderit. Pariatur consectetur elit laboris magna sint. Exercitation dolore adipisicing aute qui deserunt. Qui velit mollit amet proident. Commodo velit magna id aute ut cillum reprehenderit commodo mollit.\r\n",
-    "price": "$1,936.00",
-    "pictureURL": "https://source.unsplash.com/random/800x800/?img=1",
+    "title": "Kit Para Barba Premium",
+    "description": "Cera extra fuerte para bigotes, mostachos y barbas super rebeldes, 30 gramos, Extra fuerte. Ideal para mantener firme el bigote en la posición que uno desee",
+    "price": "$600.00",
+    "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_829240-MLA46536117302_062021-O.webp",
     "stock": 8,
-    "category": "2"
+    "category": "kits"
   },
   {
     "id": 5,
-    "title": "PAPRIKUT",
+    "title": "Cera Extra Fuerte Para Bigote",
     "description": "Elit fugiat nostrud proident officia. Nostrud velit sint elit reprehenderit. Officia incididunt eu et ut anim voluptate mollit laboris non sit. Officia fugiat nulla labore magna dolor anim voluptate Lorem deserunt. Commodo nostrud qui magna est commodo sint id aliqua aliqua commodo do quis. Deserunt do pariatur magna aliqua velit.\r\n",
     "price": "$3,230.98",
-    "pictureURL": "https://source.unsplash.com/random/800x800/?img=1",
+    "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_2X_974876-MLA44146163404_112020-F.webp",
     "stock": 6,
-    "category": "2"
+    "category": "Productos"
   },
   {
     "id": 6,
-    "title": "HAWKSTER",
-    "description": "Amet cillum consequat cupidatat do. Sint dolore consequat ad anim. In do ad aliqua non tempor consequat. Minim do nulla veniam adipisicing ullamco mollit. Laboris voluptate elit veniam quis deserunt minim in excepteur magna velit pariatur laborum cillum. Incididunt do labore cillum cupidatat veniam cupidatat nisi ex minim cupidatat aute cupidatat mollit.\r\n",
-    "price": "$1,544.85",
-    "pictureURL": "https://source.unsplash.com/random/800x800/?img=1",
+    "title": "Jabon Para Barba Concentrado",
+    "description": "Jabon para barba natural super concentrado, 90 gramos de jabon natural solido y super concentrado. Dura el doble que cualquier jabon y esta preparado con productos 100% naturales. Contiene un ph muy bajo.. casi similar al de nuestra barba. Esto hace que el vello facial no pierda sus priopiedades naturales a la hora del lavado. Da resultados muy superiores al de cualquier shampoo y claramente rinde mas",
+    "price": "$489.00",
+    "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_697950-MLA42862780731_072020-O.webp",
     "stock": 3,
-    "category": "1"
+    "category": "Productos"
   },
   {
     "id": 7,
-    "title": "ZINCA",
-    "description": "Ullamco sunt aliqua ea nostrud ex culpa nulla dolore incididunt voluptate. Eu in amet velit duis amet amet occaecat pariatur consectetur deserunt Lorem aliqua qui consectetur. Officia consectetur anim non incididunt veniam reprehenderit eiusmod dolore esse. Elit commodo labore veniam id quis et consectetur.\r\n",
-    "price": "$2,106.63",
-    "pictureURL": "https://source.unsplash.com/random/800x800/?img=1",
+    "title": "Oleo Para Barba",
+    "description": "Rico en Vitamina A y E, Incrementa la suavidad del vello facial, Disminuye el efecto graso de los aceites, Origen 100% natural",
+    "price": "$1,090.00",
+    "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_686298-MLA49665091233_042022-O.webp",
     "stock": 2,
-    "category": "1"
+    "category": "Productos"
   },
   {
     "id": 7,
-    "title": "ZINCA",
-    "description": "Ullamco sunt aliqua ea nostrud ex culpa nulla dolore incididunt voluptate. Eu in amet velit duis amet amet occaecat pariatur consectetur deserunt Lorem aliqua qui consectetur. Officia consectetur anim non incididunt veniam reprehenderit eiusmod dolore esse. Elit commodo labore veniam id quis et consectetur.\r\n",
+    "title": "Cera Polvo Texturizador",
+    "description": "Polvo Texturizador Legends, Terminación mate, proporciona una fijación duradera y natural para todo tipo de cabello.",
     "price": "$2,106.63",
-    "pictureURL": "https://source.unsplash.com/random/800x800/?img=1",
+    "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_2X_648474-MLA50344950388_062022-F.webp",
     "stock": 2,
-    "category": "1"
+    "category": "Productos"
   }
 ]
 

@@ -3,7 +3,7 @@ import Item from './Item'
 
 const ItemList = ({items}) => {
   return (
-     <div className="row justify-content-between">
+     <div className="row ">
         {Object.entries(items).map((item) => (<Item key={item[0]} item={item[1]}/>))}
      </div>
   )

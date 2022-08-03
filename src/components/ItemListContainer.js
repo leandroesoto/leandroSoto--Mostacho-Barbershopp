@@ -8,7 +8,6 @@ import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({greeting}) => {
   const { category } = useParams();
-  console.log(category)
   const [listaProductos, setListaProductos]= useState([])
   const[alerta, setAlerta] = useState(false)
   const [cargando, setCargando] = useState(true)
@@ -18,10 +17,8 @@ const ItemListContainer = ({greeting}) => {
     productos_data
         .then((res) => {
             if (category) {
-              console.log('entra')
               setListaProductos(res.filter((product) => product.category === category));
             } else {
-              console.log('entra2')
               setListaProductos(res);
             }
         })
@@ -31,17 +28,13 @@ const ItemListContainer = ({greeting}) => {
 
 
 
-
-
-
-
   return (
     <>
     <Header titulo={greeting}/>
     <div className="content">
       <div className="container">
         <div className='overlay-wrapper'>
-            { cargando ? <div class="overlay"><i class="fas fa-3x fa-sync-alt fa-spin"></i><spam className="text-muted ml-2"> Cargando...</spam></div> : <ItemList items={listaProductos}/>}
+            { cargando ? <div className="overlay"><i className="fas fa-3x fa-sync-alt fa-spin"></i><span className="text-muted ml-2"> Cargando...</span></div> : <ItemList items={listaProductos}/>}
             {alerta && <p>{alerta}</p>}
         </div>
       </div>

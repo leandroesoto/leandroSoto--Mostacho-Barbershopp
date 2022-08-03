@@ -24,8 +24,8 @@ const NavBar = () => {
                 <li className="nav-item dropdown">
                 <a id="dropdownSubMenu1" href="/#" data-toggle="dropdown" aria-expanded="false" className="nav-link dropdown-toggle">Categorias</a>
                 <ul aria-labelledby="dropdownSubMenu1" className="dropdown-menu border-0 shadow">
-                    <li><Link to={`/category/1`}className="dropdown-item">Categoria 1</Link></li>
-                    <li><Link to={`/category/2`} className="dropdown-item">Categoria 2</Link></li>
+                    <li><Link to={`/category/Productos`}className="dropdown-item">Productos</Link></li>
+                    <li><Link to={`/category/kits`} className="dropdown-item">kits</Link></li>
                     <li><Link to={`/`} className="dropdown-item">Todo</Link></li>
                 </ul>
                 </li>

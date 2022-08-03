@@ -1,7 +1,25 @@
 import React from 'react'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import ItemCount  from './ItemCount'
+
+
 
 
 const ItemDetail = ({item}) => {
+
+    const MySwal = withReactContent(Swal)
+
+    const onAdd = (cantidad) => {
+        MySwal.fire({
+            title: `Agregaste ${cantidad} items en el carrito`,
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 1500
+
+        })
+    }
+
   return (
     <>
     <div className='row'>
@@ -10,16 +28,16 @@ const ItemDetail = ({item}) => {
                 <div className="row">
                     <div className="col-12 col-sm-5">
                         <h3 className="d-inline-block d-sm-none">{item.title}</h3>
-                        <div className="col-12">
+                        <div className="col-12" >
                             <img src={item.pictureURL} className="product-image" alt="Product Image0"/>
                         </div>
-                        <div className="col-12 product-image-thumbs">
+                        {/* <div className="col-12 product-image-thumbs">
                             <div className="product-image-thumb active"><img src={item.pictureURL} alt="Product Image1"/></div>
                             <div className="product-image-thumb"><img src={item.pictureURL} alt="Product Image2"/></div>
                             <div className="product-image-thumb"><img src={item.pictureURL} alt="Product Image3"/></div>
                             <div className="product-image-thumb"><img src={item.pictureURL} alt="Product Image4"/></div>
                             <div className="product-image-thumb"><img src={item.pictureURL} alt="Product Image5"/></div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="col-12 col-sm-7">
                         <h3 className="my-3">{item.title}</h3>
@@ -37,10 +55,10 @@ const ItemDetail = ({item}) => {
                                         Disponibles: {item.stock}
                                     </div>
                                 </h5>
+
                                 <div className="mt-4 text-center">
-                                    <div className="btn btn-primary">
-                                        <i className="fas fa-cart-plus fa-lg mr-2"></i>
-                                        Agregar al carrito
+                                    <div className='mt-3'>
+                                        <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
                                     </div>
                                 </div>
                             </div>
