@@ -3,7 +3,6 @@ import Header from './Header'
 import {productos_data} from '../moks/data-api'
 import ItemList from './ItemList'
 import { useEffect, useState } from "react"
-import { getCategory } from '../moks/data-api'
 import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({greeting}) => {
@@ -22,7 +21,7 @@ const ItemListContainer = ({greeting}) => {
               setListaProductos(res);
             }
         })
-        .catch((err) => alert("Ha ocurrido un error", err))
+        .catch((err) => setAlerta('lo sentimos hubo un error'))
         .finally(()=> setCargando(false))
   }, [category]);
 

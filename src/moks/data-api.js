@@ -29,7 +29,7 @@ const productos =[
   },
   {
     "id": 3,
-    "title": "Pomada Cabello Oleo Barberia",
+    "title": "Oleo Barberia",
     "description": "Pomada al agua ultra mate de larga duracion y fijación media.",
     "price": "$750.00",
     "pictureURL": "https://http2.mlstatic.com/D_NQ_NP_865417-MLA45214022636_032021-O.webp",

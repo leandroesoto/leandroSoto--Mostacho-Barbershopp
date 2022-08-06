@@ -20,7 +20,6 @@ const ItemDetailContainer = ({greeting}) => {
       }, [productoId]);
 
 
-
   return (
     <>
     <Header titulo={greeting}/>
