@@ -1,24 +1,22 @@
 import React from 'react'
-// import Swal from 'sweetalert2'
-// import withReactContent from 'sweetalert2-react-content'
 import ItemCount  from './ItemCount'
 import { useState } from 'react'
 import { Link } from "react-router-dom"
-
+import { useCartContext } from '../context/CartContext'
 
 
 
 const ItemDetail = ({item}) => {
 
     const [goCart, setGoCart] = useState(false)
+    const {addItem} = useCartContext()
     const [cantidad, setcantidad] = useState(0)
 
-    const onAdd = (quantityToAdd) => {
+    const onAdd = (quantity) => {
         setGoCart(true)
-        setcantidad(quantityToAdd)
+        setcantidad(quantity)
+        addItem(item, quantity)
     }
-
-    // const { title, pictureURL, description, price, stock } = item
 
 
   return (
@@ -41,7 +39,7 @@ const ItemDetail = ({item}) => {
                             <div className='col-12 col-sm-6'>
                                 <h3 className="mt-4 text-center">
                                     <div className="Text-info">
-                                        {item.price}
+                                        ${item.price}
                                     </div>
                                 </h3>
                                 <h5 className="mt-4 text-center">

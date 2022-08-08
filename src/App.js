@@ -1,15 +1,15 @@
 import NavBar from './components/NavBar';
 import ContentWrapper from './components/ContentWrapper';
-import CardContext from './context/CardContext';
+import CartProvider from './context/CartContext';
 
 function App() {
  
   return (
     <>
-    <CardContext.Provider value={[]}>
+    <CartProvider>
       <NavBar/>
       <ContentWrapper/>
-    </CardContext.Provider>
+    </CartProvider>
     </>
   );
 }

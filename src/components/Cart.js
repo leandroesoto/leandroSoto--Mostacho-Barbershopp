@@ -1,8 +1,12 @@
 import React from 'react'
 import Header from './Header'
+import { useCartContext } from '../context/CartContext'
 
 
 const Cart = () => {
+
+  const {cart} = useCartContext()
+
   return (
     <>
     <Header titulo = ''/>
@@ -15,32 +19,37 @@ const Cart = () => {
               </div>
               <div className="card-body">
                  <div className="row">
-                    <div className="col-12 table-responsive">
+                    <div className="col-12 table-responsive text-center">
+
+                    { cart.length > 0 ? 
+
                       <table className="table table-striped">
                         <thead>
                           <tr>
                             <th>Item</th>
                             <th>Producto</th>
-                            <th>Description</th>
                             <th>Cantidad</th>
                             <th>Subtotal</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Denominación</td>
-                            <td>Detalle</td>
-                            <td>3</td>
-                            <td>$250</td>
+                        {cart.map((item, index) => (
+                          <tr key={item.id}>
+                            <td>{index + 1}</td>
+                            <td>{item.title}</td>
+                            <td>{item.quantity}</td>
+                            <td>${item.price * item.quantity}</td>
                           </tr>
+                        ))}
+                        
                         </tbody>
                       </table>
+                    : 'no hay productos en tu carrito'}
                     </div>
                   </div>
               </div>
               <div className='card-footer'>
-                <button className='btn btn-success float-right'>Finalizar Compra</button>
+              { cart.length > 0 ? <button className='btn btn-success float-right'>Finalizar Compra</button> : ''}
               </div>
           </div>
         </div>
