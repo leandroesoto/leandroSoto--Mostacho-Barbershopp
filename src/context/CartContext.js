@@ -25,10 +25,27 @@ const CartProvider = ({ children }) => {
         }
         setCart(newCart)
     }
-    console.log('productos en carrito', cart)
+
+    const cantInCart = () => {
+        return cart.reduce((acc, prod) => (acc += prod.quantity), 0);
+      };
+
+    const totalPrice = () => {
+        return cart.reduce((acc, prod) => (acc += prod.price * prod.quantity), 0);
+      };
+
+    const cartfunct = {
+        cart,
+        clear,
+        addItem,
+        removeItem,
+        cantInCart,
+        totalPrice,
+        isInCart,
+      };
 
   return (
-    <CartContext.Provider value={{clear, isInCart, removeItem, addItem, cart}}>
+    <CartContext.Provider value={cartfunct}>
         {children}
     </CartContext.Provider>
   )

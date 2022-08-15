@@ -1,11 +1,16 @@
 import React from 'react'
 import Header from './Header'
 import { useCartContext } from '../context/CartContext'
+import { Link } from "react-router-dom"
+
 
 
 const Cart = () => {
 
   const {cart} = useCartContext()
+  const {totalPrice} = useCartContext()
+  const {removeItem} = useCartContext()
+
 
   return (
     <>
@@ -30,6 +35,7 @@ const Cart = () => {
                             <th>Producto</th>
                             <th>Cantidad</th>
                             <th>Subtotal</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -38,9 +44,16 @@ const Cart = () => {
                             <td>{index + 1}</td>
                             <td>{item.title}</td>
                             <td>{item.quantity}</td>
-                            <td>${item.price * item.quantity}</td>
+                            <td>$ {item.price * item.quantity}</td>
+                            <td style={{width:  '3%'}}><span className='btn btn-sm text-danger' onClick={()=>removeItem(item.id)}><i className="fas fa-trash"></i></span></td>
                           </tr>
                         ))}
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <th>Total</th>
+                            <th>$ {totalPrice()}</th>
+                          </tr>
                         
                         </tbody>
                       </table>
@@ -49,7 +62,7 @@ const Cart = () => {
                   </div>
               </div>
               <div className='card-footer'>
-              { cart.length > 0 ? <button className='btn btn-success float-right'>Finalizar Compra</button> : ''}
+              { cart.length > 0 ? <> <Link to={`/`} className="btn btn-info float-left">Agregar otro Pruducto</Link> <button className='btn btn-success float-right'>Finalizar Compra</button></> : <Link to={`/`} className="btn btn-info float-right">Seleccionar Producto</Link>}
               </div>
           </div>
         </div>

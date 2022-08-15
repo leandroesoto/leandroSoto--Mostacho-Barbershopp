@@ -92,14 +92,14 @@ export const productos_data = new Promise((resolve, reject) => {
         reject('lo sentimos hubo un error')
       }
 
-    },2000)
+    },1000)
 
   })
 
 
 export const getItem = (productoId) => {
     const task = new Promise((resolve) => {
-      setTimeout(() => resolve(productos.filter((producto) => producto.id === Number(productoId),)[0] || {}), 2000);
+      setTimeout(() => resolve(productos.filter((producto) => producto.id === Number(productoId),)[0] || {}), 1000);
     });
     return task;
   };
@@ -107,7 +107,7 @@ export const getItem = (productoId) => {
 
 export const getCategory = (category) => {
     const task = new Promise((resolve) => {
-      setTimeout(() => resolve(productos.filter((producto) => producto.category === category,)[0] || {}), 2000);
+      setTimeout(() => resolve(productos.filter((producto) => producto.category === category,)[0] || {}), 1000);
     });
     return task;
   };

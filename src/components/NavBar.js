@@ -2,8 +2,11 @@ import React from 'react'
 import Mostacho from '../mostacho.jpg'
 import CardWidget from './CardWidget'
 import { Link } from "react-router-dom"
+import { useCartContext } from '../context/CartContext'
+
 
 const NavBar = () => {
+    const {cart} = useCartContext()
 
   return (
   <nav className="main-header navbar navbar-expand-md navbar-light navbar-olive">
@@ -32,7 +35,7 @@ const NavBar = () => {
             </ul>
         </div>
         <ul className="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-            <CardWidget/>
+        { cart.length > 0 ? <CardWidget/> : ''}
         </ul>
     </div>
   </nav>
