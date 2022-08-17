@@ -4,20 +4,41 @@ import Header from './Header'
 import { useEffect, useState } from "react"
 import {getItem} from '../moks/data-api'
 import {useParams} from "react-router-dom";
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
+
 
 const ItemDetailContainer = ({greeting}) => {
 
-    const {productoId} = useParams();
+    const {id} = useParams();
     const [Producto, setProducto]= useState([])
     const[alerta, setAlerta] = useState(false)
     const [cargando, setCargando] = useState(true)
   
+    // useEffect(() => {
+    //     getItem(productoId)
+    //       .then((Producto) => {setProducto(Producto);})
+    //       .catch((error) => {setAlerta(true);})
+    //       .finally(() => setCargando(false));
+    //   }, [productoId]);
+
+
     useEffect(() => {
-        getItem(productoId)
-          .then((Producto) => {setProducto(Producto);})
-          .catch((error) => {setAlerta(true);})
-          .finally(() => setCargando(false));
-      }, [productoId]);
+      const db = getFirestore();
+  
+      const productRef = doc(db, 'items', id);
+  
+      getDoc(productRef)
+        .then((snapshot) => {
+          setProducto({ ...snapshot.data(), id: snapshot.id });
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+        .finally(() => {
+          setCargando(false);
+        });
+    }, [id]);
+    
 
 
   return (

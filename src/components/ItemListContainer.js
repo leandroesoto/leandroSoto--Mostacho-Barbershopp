@@ -5,6 +5,14 @@ import ItemList from './ItemList'
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
 
+import {
+	collection,
+	getFirestore,
+	getDocs,
+	query,
+	where,
+} from 'firebase/firestore';
+
 const ItemListContainer = ({greeting}) => {
   const { category } = useParams();
   const [listaProductos, setListaProductos]= useState([])
@@ -12,21 +20,60 @@ const ItemListContainer = ({greeting}) => {
   const [cargando, setCargando] = useState(true)
 
   
+  // useEffect(() => {
+  //   productos_data
+  //       .then((res) => {
+  //           if (category) {
+  //             setListaProductos(res.filter((product) => product.category === category));
+  //           } else {
+  //             setListaProductos(res);
+  //           }
+  //       })
+  //       .catch((err) => setAlerta('lo sentimos hubo un error'))
+  //       .finally(()=> setCargando(false))
+  // }, [category]);
+
+
+
   useEffect(() => {
-    productos_data
-        .then((res) => {
-            if (category) {
-              setListaProductos(res.filter((product) => product.category === category));
-            } else {
-              setListaProductos(res);
-            }
-        })
-        .catch((err) => setAlerta('lo sentimos hubo un error'))
-        .finally(()=> setCargando(false))
-  }, [category]);
+		const db = getFirestore();
+
+		const porductsCollection = collection(db, 'items');
+
+		if (category) {
+			getDocs(query(porductsCollection, where('category', '==', category)))
+				.then((snapshot) => {
+					setListaProductos(
+						snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+					);
+				})
+				.catch((error) => {
+					console.log(error);
+				})
+				.finally(() => {
+					setCargando(false);
+				});
+		} else {
+			getDocs(porductsCollection)
+				.then((snapshot) => {
+					setListaProductos(
+						snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+					);
+				})
+				.catch((error) => {
+					console.log(error);
+				})
+				.finally(() => {
+					setCargando(false);
+				});
+		}
+	console.log(listaProductos)
+	}, [category]);
 
 
 
+
+  
   return (
     <>
     <Header titulo={greeting}/>
