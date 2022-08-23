@@ -4,6 +4,7 @@ import ItemListContainer from './ItemListContainer'
 import ItemDetailContainer from './ItemDetailContainer'
 import Cart from './Cart'
 import Contact from './Contact'
+import Sale from './Sale'
 
 
 const ContentWrapper = () => {
@@ -15,6 +16,7 @@ const ContentWrapper = () => {
         <Route path="/item/:id" element={<ItemDetailContainer greeting='Detallle del producto'/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/contacto" element={<Contact/>} />
+        <Route path="/sale" element={<Sale/>} />
       </Routes>
     </div>
   )

@@ -14,12 +14,6 @@ const ItemDetailContainer = ({greeting}) => {
     const[alerta, setAlerta] = useState(false)
     const [cargando, setCargando] = useState(true)
   
-    // useEffect(() => {
-    //     getItem(productoId)
-    //       .then((Producto) => {setProducto(Producto);})
-    //       .catch((error) => {setAlerta(true);})
-    //       .finally(() => setCargando(false));
-    //   }, [productoId]);
 
 
     useEffect(() => {
