@@ -1,36 +1,34 @@
 # Mostacho BarberShopp
 
-Mostacho BarberShopp es una app creada con React.js para el proyecto final del curso de React en CoderHouse
+## Descripción del proyecto
 
-## Gif modelo
-- link de navegación
+La idea del proyecto es simular un E-commerce, en este caso una tienda de artículos relacionados con el articulos de barberia, para el proyecto final del curso de React en CoderHouse.
+La aplicación permite navegar entre distintas categorías de productos, ver el detalle de estos, agregarlos al carrito y procesar una compra.
+Se busca simular todo el proceso de compra de un E-commerce real.
 
-<a href='https://postimg.cc/KRfkY40g' target='_blank'><img src='https://i.postimg.cc/KRfkY40g/gif-mostacho-Barber-Shopp.gif' border='0' alt='gif-mostacho-Barber-Shopp'/></a>
+## Tecnologías usadas
 
-## Como instalar?
-link para crear app-->[Create React App](https://github.com/facebook/create-react-app).
-Instalación para React Js:
+Las principales tecnologías usadas son:
 
- - npm install g create-react-app my-app
+  - React
+  - React DOM
+  - React Router
+  - Firestore
+  - Bootstrap
 
- - cd my-app
 
- - npm start
+## Como levantar el proyecto
 
-## Si ya usas React JS
- - npm install
+1. Descargar e instalar [Node JS](https://nodejs.org/en/) 
+2. Abrir la consola
+3. Posicionarse en la carpeta raíz del proyecto
+4. Una vez posicionado en esa carpeta ejecutar por consola "npm install"
+5. Luego correr el comando "npm start"
+6. Abrir el browser y dirigirse a la url **http://localhost:3000/**
 
- - La app corre como [http://localhost:3000](http://localhost:3000) 
+## Demo
 
-## Tecnologias aplicadas
-Lista de tecnologías utilizadas en el proyecto:
-HTML5
-CSS3
-JAVASCRIPT
-REACT JS
-Bootstrap: 5.1.3
-React-bootstrap: 2.4.0
-Sweetalert2: 11.4.23
+![Demo](https://i.postimg.cc/KRfkY40g/gif-mostacho-Barber-Shopp.gif)
 
 ## Contacto
 

@@ -34,10 +34,6 @@ const Sale = () => {
 
     const finalizarCompra = (e) =>{
         e.preventDefault()
-        console.log(Object.values(comprador))
-        console.log()
-
-
        if(Object.values(comprador).length !== 3 ){
             setAlerta('todos los campos son obligatorios')
        }else if(comprador.email !== mailConf.emailConf){

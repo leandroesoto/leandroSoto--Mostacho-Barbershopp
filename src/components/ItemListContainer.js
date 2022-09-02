@@ -67,7 +67,8 @@ const ItemListContainer = ({greeting}) => {
 					setCargando(false);
 				});
 		}
-	console.log(listaProductos)
+	
+		
 	}, [category]);
 
 
