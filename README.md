@@ -28,7 +28,7 @@ Las principales tecnologías usadas son:
 
 ## Demo
 
-![Demo](https://i.postimg.cc/KRfkY40g/gif-mostacho-Barber-Shopp.gif)
+![Demo](https://i.postimg.cc/3NMCF220/gif-mostacho-Barber-Shopp.gif)
 
 ## Contacto
 
